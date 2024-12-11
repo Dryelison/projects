@@ -1,0 +1,49 @@
+.footer {
+ color: white;
+ align-items: center;
+ text-align: center;
+ color: white;
+}
+
+.footer h4:hover{
+    color: #00bcd4;
+}
+
+.footer h4{
+    text-align: right;
+    width: 83rem;
+    top: 400px;
+    right: 130px;
+    position: fixed;
+}
+
+.social-icons {
+    text-align: right;
+    top: 460px;
+    right: 132px;
+    position: fixed;
+    animation: float 3s ease-in-out infinite;
+}
+
+.social-icons a {
+ margin: 0 10px;
+ color: white;
+ text-decoration: none;
+ text-align: right;
+}
+
+.social-icons a:hover{
+    color: #0077b5;
+}
+
+.social-icons span a:hover{
+    color: #8c231e;
+}
+
+/* .direitos p{
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    width: auto;
+} */

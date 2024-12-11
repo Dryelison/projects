@@ -1,0 +1,40 @@
+/* Cursor personalizado */
+.laser-cursor {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgba(255, 0, 0, 0.2) 70%);
+    border-radius: 50%;
+    pointer-events: none; /* Impede que o cursor interfira com cliques */
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    box-shadow: 0 0 20px rgba(254, 254, 254, 0.8), 0 0 40px rgba(255, 0, 0, 0.5);
+    animation: laserPulse 0.8s infinite;
+  }
+
+  /* Animação de pulso */
+  @keyframes laserPulse {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.5);
+      opacity: 0.6;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+  }
+  .laser-trail {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 0, 0, 0.2);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9998;
+    transition: all 0.2s ease-out;
+  }

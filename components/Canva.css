@@ -1,0 +1,10 @@
+/* Faz o canvas preencher a tela inteira */
+#matrix-canvas {
+    position: fixed;
+    top: 0;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    z-index: -1; /* Coloca o efeito atrás do conteúdo principal */
+  }

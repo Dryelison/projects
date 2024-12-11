@@ -1,0 +1,50 @@
+/* Faz o canvas preencher toda a tela */
+#tech-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black; /* Fundo escuro para destacar o efeito */
+  z-index: -1; /* Mantém o canvas no fundo */
+/* Gradiente para suavizar as bordas */
+mask-image: linear-gradient(to right, transparent, black);
+-webkit-mask-image: linear-gradient(to right, transparent, black); /* Compatibilidade com WebKit */
+}
+
+/* Adiciona estilo ao conteúdo principal */
+.content {
+  position: relative;
+  z-index: 1; /* Garante que o conteúdo fique acima do efeito */
+  color: white;
+  text-align: center;
+  margin-top: 20vh;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  /* Ajusta o canvas para dispositivos menores */
+  #tech-canvas {
+    mask-image: linear-gradient(to bottom, transparent, black);
+    -webkit-mask-image: linear-gradient(to left, transparent, black);
+  }
+
+  /* Ajusta o conteúdo para telas pequenas */
+  .content {
+    margin-top: 10vh; /* Reduz o espaço superior */
+    padding: 10px; /* Adiciona padding para melhor visualização */
+    font-size: 0.9rem; /* Reduz o tamanho da fonte */
+    position: fixed;
+
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Para telas muito pequenas */
+  .content {
+    margin-top: 5vh;
+    font-size: 0.8rem; /* Reduz ainda mais o tamanho da fonte */
+    line-height: 1.4; /* Ajusta o espaçamento entre linhas */
+  }
+}

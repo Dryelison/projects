@@ -1,0 +1,306 @@
+/* Estilo básico */
+.home {
+  text-align: left;
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out; /* Animação inicial para a página */
+}
+
+/* Título com animação de slide e fade */
+.my-name {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  animation: slideInFromLeft 1.1s ease-out;
+}
+
+/* Descrição com fade-in */
+.description {
+  font-size: 1.4rem;
+  color: white;
+  border-radius: 20px;
+  text-align: left;
+  width: 45rem;
+  animation: fadeIn 2s ease-in;
+  word-spacing: 3px;
+}
+
+/* Linha animada */
+hr {
+  width: 20%;
+  height: 5px;
+  margin: 0;
+  background-color: aliceblue;
+  border: 10px;
+  border-radius: 5px;
+  animation: expandWidth 1.5s ease-out;
+  margin-bottom: 50px;
+}
+
+/* Imagem principal */
+.image {
+  align-items: center;
+  text-align: left;
+  position: relative;
+  animation: fadeIn 2s ease-in;
+}
+
+.image img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50vh;
+  animation: zoomIn 1.5s ease-in-out; /* Animação de zoom suave */
+  border-radius: 40px;
+}
+
+/* Imagem circular animada */
+.circle-image img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #333;
+  position: absolute;
+  position: fixed;
+  top: 100px;
+  right: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: float 3s ease-in-out infinite; /* Animação flutuante */
+}
+
+
+/* Keyframes para as animações */
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animação de slide-in da esquerda */
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animação de expandir largura */
+@keyframes expandWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 20%;
+  }
+}
+
+/* Animação de zoom */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Animação de flutuação */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.download-button {
+  top: 20px;
+  left: 10px;
+  position: fixed;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #575151;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #000102;
+}
+
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.logo-item {
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+}
+
+.logo-item img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 10px;
+}
+
+.logo-item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.main-content {
+  padding: 10rem;
+  text-align: center;
+  margin-bottom: 0;
+
+}
+
+.topics {
+  margin-top: 50px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.topics h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.topic-item {
+  background: #5555;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.topic-item img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.topic-item h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.topic-item p {
+  font-size: 1rem;
+  color: white;
+}
+
+.topic-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    padding: 10px;
+    text-align: center; /* Centraliza o texto para telas pequenas */
+  }
+
+  /* Reduz o tamanho do título */
+  .my-name {
+    font-size: 2.5rem;
+  }
+
+  /* Ajusta a descrição */
+  .description {
+    font-size: 1rem;
+    width: 100%; /* Adapta a largura ao tamanho da tela */
+    text-align: justify; /* Centraliza o texto */
+
+  }
+
+  /* Linha animada */
+  hr {
+    width: 50%; /* Aumenta a largura para maior impacto visual em telas menores */
+  }
+
+  /* Imagem principal */
+  .image img {
+    height: 10vh; /* Reduz a altura da imagem */
+    border-radius: 20px; /* Ajusta a borda para combinar com o tamanho reduzido */
+  }
+
+  /* Imagem circular */
+  .circle-image img {
+    width: 100px; /* Reduz o tamanho */
+    height: 100px;
+    top: 100px; /* Ajusta a posição */
+    right: 10px;
+  }
+
+  /* Botão de download */
+  .download-button {
+    font-size: 14px;
+    padding: 8px 16px;
+    top: 10px;
+    left: 10px;
+  }
+
+  /* Ajusta a seção de logos */
+  .logos {
+    justify-content: center; /* Centraliza os itens */
+    gap: 5px; /* Reduz o espaçamento */
+  }
+
+  .logo-item {
+    width: 80px; /* Reduz a largura dos itens */
+  }
+
+  .logo-item img {
+    width: 50px; /* Reduz o tamanho das logos */
+    height: 50px;
+  }
+
+  /* Ajusta o layout dos tópicos */
+  .topics-grid {
+    grid-template-columns: 1fr; /* Apenas uma coluna em telas menores */
+
+  }
+
+  .topic-item img {
+    max-height: 150px; /* Reduz a altura das imagens */
+  }
+
+  .topic-item h4 {
+    font-size: 1rem; /* Ajusta o tamanho do texto */
+  }
+
+  .topic-item p {
+    font-size: 0.9rem; /* Reduz o tamanho do texto */
+  }
+}
