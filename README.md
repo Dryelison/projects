@@ -1,4 +1,4 @@
-My Personal Website
+My Personal Website in progress...
 
 This repository contains the source code for my personal website, which I am developing to showcase my skills, projects, and professional journey. I am using modern technologies such as JavaScript and React to build an interactive, responsive, and elegantly designed application.
 
